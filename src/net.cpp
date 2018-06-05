@@ -1483,7 +1483,7 @@ void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "faithcoin " + FormatFullVersion();
+        std::string strDesc = "ateccoin " + FormatFullVersion();
 
         try {
             while (true) {

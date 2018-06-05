@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: faithcoin
+  name: ateccoin
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: faithcoin
+      app: ateccoin
   template:
     metadata:
       labels:
-        app: faithcoin
+        app: ateccoin
         version: v0.15
     spec:
       containers:
-      - name: faithcoin
-        image: toolboc/faithcoin
+      - name: ateccoin
+        image: toolboc/ateccoin
         ports:
-        - containerPort: 9666
-          name: faithcoin
+        - containerPort: 9495
+          name: ateccoin
           protocol: TCP
