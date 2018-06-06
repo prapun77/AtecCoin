@@ -80,8 +80,8 @@ public:
         consensus.BIP65Height = 918684; // bab3041e8977e0dc3eeff63fe707b92bde1dd449d8efafb248c27c8264cc311a
         consensus.BIP66Height = 811879; // 7aceee012833fa8952f8835d8b1b3ae233cd6ab08fdb27a771d2bd7bdc491894
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); 
-        consensus.nPowTargetTimespan = 3.5 * 24 * 60 * 60; // 3.5 days
-        consensus.nPowTargetSpacing = 2.5 * 60;
+        consensus.nPowTargetTimespan = 1 * 1 * 60 * 60; // 1 hours
+        consensus.nPowTargetSpacing = 0.5 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 6048; // 75% of 8064
@@ -147,13 +147,11 @@ public:
         checkpointData = (CCheckpointData) {
             {
                 {  0, uint256S("0xffcae0e2e7cbe7321db86ba76c32e66debd1aa9644f3a01ada58193922c58c67")},
-                {  0, uint256S("0xffcae0e2e7cbe7321db86ba76c32e66debd1aa9644f3a01ada58193922c58c67")},
-
-/*
-                {  1500, uint256S("0x841a2965955dd288cfa707a755d05a54e45f8bd476835ec9af4402a2b59a2967")},
-                {  4032, uint256S("0x9ce90e427198fc0ef05e5905ce3503725b80e26afd35a987965fd7e3d9cf0846")},
-                {  8064, uint256S("0xeb984353fc5190f210651f150c40b8a4bab9eeeff0b729fcb3987da694430d70")},
-                { 16128, uint256S("0x602edf1859b7f9a6af809f1d9b0e6cb66fdc1d4d9dcd7a4bec03e12a1ccd153d")},
+                { 10, uint256S("0x052cdb951e803368369e73c5d8f62272f850c00c60d9c5d06263af473df4b3f5")},
+                {100, uint256S("0xa3bb907afd176857d0c2ca2293de3cd4d2084964e7a061b432c204039375b959")},
+                { 189, uint256S("0xc4f5a5b36d935813197322a9f8e34eaf092d3ff674f8d8978d6429a19047d907")},
+                { 256, uint256S("0xcf095f3eb9563b911fea2080e248b118efb388192efcbd9680a8d4bea6887741")},
+/*                { 16128, uint256S("0x602edf1859b7f9a6af809f1d9b0e6cb66fdc1d4d9dcd7a4bec03e12a1ccd153d")},
                 { 23420, uint256S("0xd80fdf9ca81afd0bd2b2a90ac3a9fe547da58f2530ec874e978fce0b5101b507")},
                 { 50000, uint256S("0x69dc37eb029b68f075a5012dcc0419c127672adb4f3a32882b2b3e71d07a20a6")},
                 { 80000, uint256S("0x4fcb7c02f676a300503f49c764a89955a8f920b46a8cbecb4867182ecdb2e90a")},
