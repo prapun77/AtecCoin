@@ -16,14 +16,14 @@ WIN_RELEASE_FOLDER=./bin/release-win64
 
 # zip win64 binaries
 mkdir -p $WIN_RELEASE_FOLDER
-cp -v ./src/strayacoin-cli.exe $WIN_RELEASE_FOLDER/
-cp -v ./src/strayacoind.exe $WIN_RELEASE_FOLDER/
-cp -v ./src/bench/bench_strayacoin.exe $WIN_RELEASE_FOLDER/
-#cp -v ./src/test/test_strayacoin.exe $WIN_RELEASE_FOLDER/
-cp -v ./src/qt/strayacoin-qt.exe $WIN_RELEASE_FOLDER/
+cp -v ./src/ateccoin-cli.exe $WIN_RELEASE_FOLDER/
+cp -v ./src/ateccoind.exe $WIN_RELEASE_FOLDER/
+cp -v ./src/bench/bench_ateccoin.exe $WIN_RELEASE_FOLDER/
+#cp -v ./src/test/test_ateccoin.exe $WIN_RELEASE_FOLDER/
+cp -v ./src/qt/ateccoin-qt.exe $WIN_RELEASE_FOLDER/
 #cp -v ./src/qt/test/test_strayacoin-qt.exe $WIN_RELEASE_FOLDER/
-cp -v ./src/strayacoin-tx.exe $WIN_RELEASE_FOLDER/
-cp -v ./strayacoin.conf $WIN_RELEASE_FOLDER/
+cp -v ./src/ateccoin-tx.exe $WIN_RELEASE_FOLDER/
+cp -v ./ateccoin.conf $WIN_RELEASE_FOLDER/
 cp -v "./bin/common files/README.txt" $WIN_RELEASE_FOLDER
 cp -v "./bin/common files/libbitcoinconsensus-0.dll" $WIN_RELEASE_FOLDER
 cp -v "./bin/common files/mine.bat" $WIN_RELEASE_FOLDER
