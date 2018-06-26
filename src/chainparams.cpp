@@ -104,17 +104,17 @@ public:
         consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000");
 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("0x29c8c00e1a5f446a6364a29633d3f1ee16428d87c8d3851a1c570be8170b04c2"); //1259849
+        consensus.defaultAssumeValid = uint256S("0x0000000000000000000000000000000000000000000000000000000000000000"); //1259849
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xd9;
-        pchMessageStart[1] = 0xe2;
-        pchMessageStart[2] = 0xf6;
-        pchMessageStart[3] = 0xed;
+        pchMessageStart[0] = 0xd8;
+        pchMessageStart[1] = 0xe1;
+        pchMessageStart[2] = 0xf4;
+        pchMessageStart[3] = 0xe1;
         nDefaultPort = 9495;
         nPruneAfterHeight = 100000;
 
@@ -132,39 +132,22 @@ public:
         //vSeeds.emplace_back("dnsseed.koin-project.com", false);
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,23);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
-        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,50);
-        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,38);
-        base58Prefixes[EXT_PUBLIC_KEY] = {0xfc, 0x78, 0xB2, 0x1E};
-        base58Prefixes[EXT_SECRET_KEY] = {0xfc, 0x78, 0xAD, 0xE4};
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,15);
+        base58Prefixes[SCRIPT_ADDRESS2] = std::vector<unsigned char>(1,54);
+        base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,39);
+        base58Prefixes[EXT_PUBLIC_KEY] = {0xf1, 0x78, 0xB2, 0x1E};
+        base58Prefixes[EXT_SECRET_KEY] = {0xf1, 0x78, 0xAD, 0xE4};
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = true;
 
         checkpointData = (CCheckpointData) {
             {
-                {  0, uint256S("0xffcae0e2e7cbe7321db86ba76c32e66debd1aa9644f3a01ada58193922c58c67")},
-/*                { 10, uint256S("0x052cdb951e803368369e73c5d8f62272f850c00c60d9c5d06263af473df4b3f5")},
-                {100, uint256S("0xa3bb907afd176857d0c2ca2293de3cd4d2084964e7a061b432c204039375b959")},
-                { 189, uint256S("0xc4f5a5b36d935813197322a9f8e34eaf092d3ff674f8d8978d6429a19047d907")},
-                { 256, uint256S("0xcf095f3eb9563b911fea2080e248b118efb388192efcbd9680a8d4bea6887741")},
-                { 16128, uint256S("0x602edf1859b7f9a6af809f1d9b0e6cb66fdc1d4d9dcd7a4bec03e12a1ccd153d")},
-                { 23420, uint256S("0xd80fdf9ca81afd0bd2b2a90ac3a9fe547da58f2530ec874e978fce0b5101b507")},
-                { 50000, uint256S("0x69dc37eb029b68f075a5012dcc0419c127672adb4f3a32882b2b3e71d07a20a6")},
-                { 80000, uint256S("0x4fcb7c02f676a300503f49c764a89955a8f920b46a8cbecb4867182ecdb2e90a")},
-                {120000, uint256S("0xbd9d26924f05f6daa7f0155f32828ec89e8e29cee9e7121b026a7a3552ac6131")},
-                {161500, uint256S("0xdbe89880474f4bb4f75c227c77ba1cdc024991123b28b8418dbbf7798471ff43")},
-                {179620, uint256S("0x2ad9c65c990ac00426d18e446e0fd7be2ffa69e9a7dcb28358a50b2b78b9f709")},
-                {240000, uint256S("0x7140d1c4b4c2157ca217ee7636f24c9c73db39c4590c4e6eab2e3ea1555088aa")},
-                {383640, uint256S("0x2b6809f094a9215bafc65eb3f110a35127a34be94b7d0590a096c3f126c6f364")},
-                {409004, uint256S("0x487518d663d9f1fa08611d9395ad74d982b667fbdc0e77e9cf39b4f1355908a3")},
-                {456000, uint256S("0xbf34f71cc6366cd487930d06be22f897e34ca6a40501ac7d401be32456372004")},
-                {638902, uint256S("0x15238656e8ec63d28de29a8c75fcf3a5819afc953dcd9cc45cecc53baec74f38")},
-                {721000, uint256S("0x198a7b4de1df9478e2463bd99d75b714eab235a2e63e741641dc8a759a9840e5")},
-*/
+                {  0, uint256S("0xffcae0e2e7cbe7321db86ba76c32e66debd1aa9644f3a01ada58193922c58c67")}
+
             }
         };
 
